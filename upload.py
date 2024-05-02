@@ -3,17 +3,7 @@ import json
 import re
 from pyrebase import pyrebase
 # Firebase configuration
-config = {
-  "apiKey": "AIzaSyD--IxFhGdSr2FU3DlqSLYnTUTFkMTlDvE",
-  "authDomain": "host-test-9bb6a.firebaseapp.com",
-  "databaseURL": "https://host-test-9bb6a-default-rtdb.firebaseio.com",
-  "projectId": "host-test-9bb6a",
-  "storageBucket": "host-test-9bb6a.appspot.com",
-  "messagingSenderId": "673454854896",
-  "appId": "1:673454854896:web:e8ed1895586610e8c06835",
-  "measurementId": "G-ZKYR6QPF92"
-}
-
+config=os.environ['firebase-creds']
 # Initialize Pyrebase
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
